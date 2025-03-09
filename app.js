@@ -39,8 +39,6 @@ onChildAdded(ref(db, "messages"), function(snapshot) {
     let data = snapshot.val();
     let messageBox = document.getElementById("messages");
     let msgElement = document.createElement("p");
-
-    // Simple string concatenation (No template literals)
     msgElement.textContent = data.name + ": " + data.text;
 
     messageBox.appendChild(msgElement);
